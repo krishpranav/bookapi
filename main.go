@@ -13,6 +13,10 @@ func main() {
 
 	/* routes */
 	r.GET("/books", controller.FindBooks)
+	r.GET("/books/:id", controller.FindBook)
+	r.POST("/books", controller.CreateBook)
+	r.PATCH("/books/:id", controller.UpdateBook)
+	r.DELETE("/books/:id", controller.DeleteBook)
 
 	r.Run()
 }
