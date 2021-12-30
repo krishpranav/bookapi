@@ -2,8 +2,6 @@
 package models
 
 import (
-	"fmt"
-
 	"github.com/jinzhu/gorm"
 )
 
@@ -15,8 +13,6 @@ func ConnectDatabase() {
 	if err != nil {
 		panic("Failed to connect to database")
 	}
-
-	fmt.Println("Conneted successfully!!")
 
 	database.AutoMigrate(&Book{})
 
